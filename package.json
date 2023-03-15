@@ -1,0 +1,29 @@
+{
+  "name": "riki-taladua-men-stack-crud-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RikiTaladua/Riki-Taladua-Men-Stack-Crud-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RikiTaladua/Riki-Taladua-Men-Stack-Crud-App/issues"
+  },
+  "homepage": "https://github.com/RikiTaladua/Riki-Taladua-Men-Stack-Crud-App#readme",
+  "dependencies": {
+    "connect-livereload": "^0.6.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "livereload": "^0.9.3",
+    "mongoose": "^7.0.2"
+  }
+}
