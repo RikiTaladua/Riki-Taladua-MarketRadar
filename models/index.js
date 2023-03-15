@@ -11,6 +11,9 @@ const mongodbUri = process.env.MONGODBURI;
     console.log('Mongoose is connected to', mongodbUri);
 })().catch(err => console.log('MongoDB connection error:\n' + err))
 
+// Export models and seed data to `server.js`
 module.exports = {
-    Pet: require('./stock')
+    Pet: require('./pet'),
+    seedPets: require('./seed')
 }
+

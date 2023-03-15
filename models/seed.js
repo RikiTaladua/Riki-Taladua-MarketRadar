@@ -13,44 +13,54 @@ const stocks = [
         ticker: "AAPL",
         price: "$152.85",
         photo: "APPLE-LOGO.jpg",
-        description: "Whiskers is a playful cat who loves to nap in the sun.",
+        description: "Apple Inc. (formerly Apple Computer Inc.) is an American computer and consumer electronics company famous for creating the iPhone, iPad and Macintosh computers. Apple is one of the largest companies globally with a market cap of over 2 trillion dollars.",
         isFeatured: false,
-        dateAdded: "2022-11-03T10:00:00.000Z"
+        dateAdded: "2022-15-03T10:00:00.000Z"
     },
     {
-        name: "Max",
-        photo: "https://www.mybestfrienddogcare.co.uk/wp-content/uploads/2019/12/My-Best-Friend-64-scaled.jpg",
-        description: "Max is a loyal and energetic dog who loves to run and play.",
+        name: "Chevron",
+        ticker: "CVX",
+        price: "$153.70",
+        photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.marketbeat.com%2Fstocks%2FNYSE%2FCVX%2F&psig=AOvVaw1yjDumjK3ehMRgBKOe-QmO&ust=1679004804939000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCJjzprr63v0CFQAAAAAdAAAAABAE",
+        description: "Chevron Corp (Chevron) is an integrated oil and gas company. It operates in the oil and gas value chain including exploration and production, storage and pipeline transportation to refining, marketing and distribution of oil and gas products.",
         isFeatured: true,
-        dateAdded: "2022-11-05T10:00:00.000Z"
+        dateAdded: "2022-15-03T10:00:00.000Z"
     },
     {
-        name: "Mittens",
-        photo: "https://cdn2-www.cattime.com/assets/uploads/gallery/european-shorthair-cat-breed-pictures/european-shorthair-cat-breed-pictures-8.jpg",
-        description: "Mittens is a cuddly cat who loves to be petted.",
+        name: "SPDR S&P 500 ETF",
+        ticker: "SPY",
+        price: "$388.98",
+        photo: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.ssga.com%2Flibrary-content%2Fimages%2Fthumbnails%2Fspy-ticker-lg.png&imgrefurl=https%3A%2F%2Fwww.ssga.com%2Fus%2Fen%2Fintermediary%2Fetfs%2Fcapabilities%2Fspdr-core-equity-etfs%2Fspy-sp-500&tbnid=i2k1WMun412XyM&vet=12ahUKEwic2oe8-979AhUGOkQIHeTxBE8QMygCegUIARC_AQ..i&docid=uF5gwGXsveMBkM&w=1200&h=653&q=SPDR%20S%26P%20500%20ETF%20logo&hl=en&ved=2ahUKEwic2oe8-979AhUGOkQIHeTxBE8QMygCegUIARC_AQ",
+        description: "The SPDR S&P 500 ETF Trust, also known as the SPY ETF, is one of the most popular funds that aims to track the Standard & Poor's (S&P) 500 Index, which comprises 500 large-cap U.S. stocks. These stocks are selected by a committee based on market size, liquidity, and industry.",
         isFeatured: false,
-        dateAdded: "2022-11-07T10:00:00.000Z"
+        dateAdded: "2022-15-03T10:00:00.000Z"
     },
     {
-        name: "Rocky",
-        photo: "https://animalsbreeds.com/wp-content/uploads/2015/01/Boxer-3.jpg",
-        description: "Rocky is a protective dog who loves to play with his toys.",
+        name: "Mastercard",
+        ticker: "MA",
+        price: "$348.08",
+        photo: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fmastercard-logo-mastercard-logo-white-background-vector-format-avaliable-127602378.jpg&tbnid=xwIXpzf_vI5a1M&vet=12ahUKEwil-M-C_N79AhUwOkQIHcn2Ck0QMygAegUIARDXAQ..i&imgrefurl=https%3A%2F%2Fwww.dreamstime.com%2Fillustration%2Flogo-mastercard.html&docid=CBfeHAgTDubR_M&w=800&h=566&q=mastercard%20stock%20logo&hl=en&ved=2ahUKEwil-M-C_N79AhUwOkQIHcn2Ck0QMygAegUIARDXAQ",
+        description: "Mastercard, Inc. is a technology company, which engages in the payments industry that connects consumers, financial institutions, merchants, governments, and business. It offers payment solutions for the development and implementation of credit, debit, prepaid, commercial, and payment programs.",
         isFeatured: true,
-        dateAdded: "2022-11-09T10:00:00.000Z"
+        dateAdded: "2022-15-05T10:00:00.000Z"
     },
     {
-        name: "Milo",
-        photo: "https://catcuddles.com/images/white-persian-cat.jpg",
-        description: "Milo is a calm and curious cat who loves to explore.",
+        name: "PepsiCo",
+        ticker: "PEP",
+        price: "$176.63",
+        photo: "https://www.google.com/imgres?imgurl=https%3A%2F%2Flogos-world.net%2Fwp-content%2Fuploads%2F2022%2F03%2FPepsico-Emblem.png&tbnid=fF7aJ0X5sUJTwM&vet=12ahUKEwjtjpHI_d79AhXFO0QIHbLIBG0QMygCegUIARDoAQ..i&imgrefurl=https%3A%2F%2Flogos-world.net%2Fpepsico-logo%2F&docid=ipTfR6lH65sWDM&w=3840&h=2160&q=pepsico%20logo&hl=en&ved=2ahUKEwjtjpHI_d79AhXFO0QIHbLIBG0QMygCegUIARDoAQ",
+        description: "PepsiCo is the largest food and beverage company in North America and the second-largest in the world, behind only Nestlé. PepsiCo's products include a wide range of household-name food and beverage brands, including Pepsi, Gatorade, Frito-Lay, Quaker Oats, Rockstar Energy, and Muscle Milk.",
         isFeatured: false,
-        dateAdded: "2022-11-11T10:00:00.000Z"
+        dateAdded: "2022-15-3T10:00:00.000Z"
     },
     {
-        name: "Daisy",
-        photo: "https://animalsbreeds.com/wp-content/uploads/2014/07/Beagle.jpg",
-        description: "Daisy is a friendly and outgoing dog who loves to meet new people.",
+        name: "Monster Beverage Corp",
+        ticker: "MNST",
+        price: "$102.41",
+        photo: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.monsterenergy.com%2Fmedia%2Fuploads_image%2F2018%2F01%2F23%2Fauto%2F400%2F0670b28ecfe047ba34a0178a4184cbf0.png&tbnid=vEyGltpyVLi1EM&vet=12ahUKEwipt_GQ_979AhVcOkQIHeO8A2MQMygAegUIARC8AQ..i&imgrefurl=https%3A%2F%2Fwww.monsterenergy.com%2F&docid=JNaLzciRv__ZdM&w=881&h=400&q=monster%20beverage%20corp%20logo&hl=en&ved=2ahUKEwipt_GQ_979AhVcOkQIHeO8A2MQMygAegUIARC8AQ",
+        description: "Monster Beverage Corp. is a holding company, which engages in the development, marketing, sale, and distribution of energy drink beverages and concentrates. It operates through the following segments: Monster Energy Drinks, Strategic Brands, and Other.",
         isFeatured: true,
-        dateAdded: "2022-11-13T10:00:00.000Z"
+        dateAdded: "2022-15-3T10:00:00.000Z"
     }
 ]
 
