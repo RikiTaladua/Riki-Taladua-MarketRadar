@@ -34,6 +34,10 @@ liveReloadServer.server.once("connection", () => {
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+/* Require the routes in the controllers folder
+--------------------------------------------------------------- */
+const stockCtrl = require('./controllers/stocks')
+const reviewsCtrl = require('./controllers/reviews')
 
 /* Middleware (app.use)
 --------------------------------------------------------------- */
@@ -58,7 +62,7 @@ app.get('/', function (req, res) {
 
 // When a GET request is sent to `/seed`, the stocks collection is seeded
 app.get('/seed', function (req, res) {
-    // Remove any existing pets
+    // Remove any existing stock
     db.Stock.deleteMany({})
         .then(removedStock => {
             console.log(`Removed ${removedStock.deletedCount} tweets`)
@@ -104,3 +108,7 @@ app.get('/about', function (req, res) {
 app.get('*', function (req, res) {
     res.send('404 Error: Page Not Found')
 });
+
+// This tells our app to look at the `controllers/applications.js` file 
+// to handle all routes that begin with `localhost:3000/applications`
+app.use('/applications', reviewsCtrl)

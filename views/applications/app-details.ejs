@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs', {title: 'My Applications | Furever Friends'}) %>
+    <link rel="stylesheet" href="/styles/app-details.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <section class="application">
+        <h1>Applicant: <%= app.applicantName %></h1>
+        <table>
+            <tr>
+                <th>
+                    <h2>Email:</h2>
+                </th>
+                <td>
+                    <h2><%= app.applicantEmail %></h2>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>Phone:</h2>
+                </th>
+                <td>
+                    <h2><%= app.applicantPhone %></h2>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>Reason for posting:</h2>
+                </th>
+                <td>
+                    <h2><%= app.reasonForPosting %></h2>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <h2>Date submitted:</h2>
+                </th>
+                <td>
+                    <h2><%= app.applicationDate.toLocaleDateString() %></h2>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
