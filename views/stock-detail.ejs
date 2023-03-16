@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: `${stock.name} | Furever Friends`}) %>
+    <link rel="stylesheet" href="/styles/stock-details.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div>
+        <img src="<%= stock.photo %>">
+        <h2 class="stock-name"><%= stock.name %></h2>
+        <section>
+            <p><strong>Ticker:</strong> <%= stock.ticker %></p>
+            <p><strong>Price:</strong> <%= stock.price %></p>
+            <p><strong>Description:</strong> <%= stock.description %></p>
+        </section>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
