@@ -11,14 +11,12 @@
 
     <main>
         <section class="hero">
-            <h2>Find Your New Best Friend</h2>
+            <h2>Find Your New Investment</h2>
             <a href="/stocks" class="btn">Learn More!</a>
         </section>
-
         <section class="about">
-            <h2>About Us</h2>
-            <p>Furever Friends is a non-profit organization dedicated to finding loving homes for animals in need. We
-                work with shelters and rescue groups across the country to help connect stocks with their new families.
+            <h2>About</h2>
+            <p> I have collected all of the best performing stocks in own personal porfolio and stocks in the market that are under-performing  and curated a watchlist in hopes of helping myself and others invest/trade for more profits.
             </p>
             <a href="/about" class="btn">Learn More</a>
         </section>
@@ -27,17 +25,14 @@
             <h2>Featured Stocks</h2>
             <ul class="stock-grid">
                 <% for (let stock of stocks) { %>
-                <li>
-                    <figure>
-                        <img src="<%= stocks.photo %>">
-                    </figure>
+                    <li>
                     <figcaption>
                         <div class="featured-info">
                             <h3><%= stock.name %></h3>
-                            <img src=" <%= stock.photo %>"">
                         </div>
                         <a href="/stocks/<%= stock._id %>" class="btn">Learn More</a>
                     </figcaption>
+                    <img class="stockimg" src=" <%= stock.photo %>">
                 </li>
                 <% } %>
             </ul>

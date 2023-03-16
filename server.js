@@ -39,6 +39,9 @@ app.set('views', path.join(__dirname, 'views'));
 --------------------------------------------------------------- */
 app.use(express.static('public'))
 app.use(connectLiveReload());
+const methodOverride = require('method-override');
+// Allows us to interpret POST requests from the browser as another request type: DELETE, PUT, etc.
+app.use(methodOverride('_method'));
 
 
 /* Mount routes
@@ -82,4 +85,22 @@ app.use('/stocks', stocksCtrl)
 --------------------------------------------------------------- */
 app.listen(process.env.PORT, function () {
     console.log('Express is listening to port', process.env.PORT);
+});
+
+
+// Body parser: used for POST/PUT/PATCH routes: 
+// this will take incoming strings from the body that are URL encoded and parse them 
+// into an object that can be accessed in the request parameter as a property called body (req.body).
+app.use(express.urlencoded({ extended: true }));
+
+
+
+app.get('/about', function (req, res) {
+    res.send('You\'ve hit the about route')
+});
+
+
+// The "catch-all" route: Runs for any other URL that doesn't match the above routes
+app.get('*', function (req, res) {
+    res.send('404 Error: Page Not Found')
 });
