@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Furever Friends'}) %>
+    <link rel="stylesheet" href="/styles/home.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="hero">
+            <h2>Find Your New Best Friend</h2>
+            <a href="/stocks" class="btn">Adopt Now!</a>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Furever Friends is a non-profit organization dedicated to finding loving homes for animals in need. We
+                work with shelters and rescue groups across the country to help connect stocks with their new families.
+            </p>
+            <a href="/about" class="btn">Learn More</a>
+        </section>
+
+        <section class="featured-stocks">
+            <h2>Featured Stocks</h2>
+            <ul class="stock-grid">
+                <% for (let stock of stocks) { %>
+                <li>
+                    <figure>
+                        <img src="<%= stocks.photo %>">
+                    </figure>
+                    <figcaption>
+                        <div class="featured-info">
+                            <h3><%= stock.name %></h3>
+                            <img src=" <%= stock.photo %>"">
+                        </div>
+                        <a href="/stocks/<%= stock._id %>" class="btn">Learn More</a>
+                    </figcaption>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

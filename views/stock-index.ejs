@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Furever Friends'}) %>
+    <link rel="stylesheet" href="/styles/stock-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <main>
+        <section class="listings">
+            <h1>Available stocks</h1>
+            <ul>
+                <% for (let stock of stocks) { %>
+                <li>
+                    <figure>
+                        <img src="<%= stock.photo %>">
+                        <figcaption>
+                            <h4><%= stock.name %></h4>
+                            <p><%= stock.ticker %>, <%= stock.price %>, <%= stock.description %></p>
+                            <a href="/stocks/<%= stock._id %>">Learn More</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

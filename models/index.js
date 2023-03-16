@@ -13,7 +13,7 @@ const mongodbUri = process.env.MONGODBURI;
 
 // Export models and seed data to `server.js`
 module.exports = {
-    Pet: require('./pet'),
-    seedPets: require('./seed')
+    Stock: require('./stock'),
+    seedStock: require('./seed')
 }
 
