@@ -19,10 +19,6 @@ const db = require('../models')
 /* Routes
 --------------------------------------------------------------- */
 // Index Route (GET/Read): Will display all stocks
-// router.get('/', function (req, res) {
-//     db.Stock.find({})
-//         .then(stocks => res.json(stocks))
-// })
 
 router.get('/', function (req, res) {
     db.Stock.find({})
@@ -33,15 +29,6 @@ router.get('/', function (req, res) {
     })
 })
 
-
-// router.get('/:id', function (req, res){
-//     db.Stock.findById(req.params.id)
-//     .then(stocks => {
-//         res.render('stock-detail', {
-//             stocks: stocks
-//         })
-//     })
-// })
 
 // Show Route (GET/Read): Will display an individual stock document
 // using the URL parameter (which is the document _id)
@@ -62,8 +49,8 @@ router.get('/new', (req, res) => {
 
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
-// creates a new pet document using the form data, 
-// and redirects the user to the new pet's show page
+// creates a new stock document using the form data, 
+// and redirects the user to the new stock's show page
 router.post('/', (req, res) => {
     db.Stock.create(req.body)
         .then(stock => res.redirect('/stock/' + stock._id))
@@ -71,7 +58,7 @@ router.post('/', (req, res) => {
 
 
 // Edit Route (GET/Read): This route renders a form
-// the user will use to PUT (edit) properties of an existing pet
+// the user will use to PUT (edit) properties of an existing stock
 router.get('/:id/edit', (req, res) => {
     db.Stock.findById(req.params.id)
         .then(stock => {

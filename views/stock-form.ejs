@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs', {title: 'Add a Listing | Furever Friends'}) %>
+    <%- include('./partials/head.ejs', {title: 'Add a Stock | Riki's WatchList'}) %>
     <link rel="stylesheet" href="/styles/stock-form.css">
 </head>
 
@@ -11,7 +11,7 @@
 
     <h1>New Stock Form</h1>
 
-    <form method="POST" action="/stocks">
+    <form method="POST" action="/stock/<%= stock.id %>?_method=PUT">
         <!-- Name input -->
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -23,7 +23,7 @@
         <br>
 
         <!-- Price input -->
-        <label for="price">Price:</label>
+        <label for="price">Price: $</label>
         <input type="number" id="price" name="price" min="0"value="<%= stock.price %>">
         <br>
 

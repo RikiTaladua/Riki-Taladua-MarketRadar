@@ -36,8 +36,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 /* Require the routes in the controllers folder
 --------------------------------------------------------------- */
-const stockCtrl = require('./controllers/stocks')
-const reviewsCtrl = require('./controllers/reviews')
+const stockCtrl = require('./controllers/stocks');
+const applicationCtrl = require('./controllers/application');
 
 /* Middleware (app.use)
 --------------------------------------------------------------- */
@@ -76,9 +76,10 @@ app.get('/seed', function (req, res) {
 });
 
 
-// This tells our app to look at the `controllers/pets.js` file 
-// to handle all routes that begin with `localhost:3000/pets`
+// This tells our app to look at the `controllers/stock.js` file 
+// to handle all routes that begin with `localhost:3000/stocks`
 app.use('/stocks', stocksCtrl)
+app.use('/application.js', applicationCtrl)
 
 
 
@@ -100,8 +101,12 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get('/about', function (req, res) {
-    res.send('You\'ve hit the about route')
+    res.render('about')
 });
+
+app.get('/new-form', function (req, res) {
+    res.render('new-form')
+})
 
 
 // The "catch-all" route: Runs for any other URL that doesn't match the above routes
@@ -111,4 +116,6 @@ app.get('*', function (req, res) {
 
 // This tells our app to look at the `controllers/applications.js` file 
 // to handle all routes that begin with `localhost:3000/applications`
-app.use('/applications', reviewsCtrl)
+app.use('/applications', applicationCtrl)
+
+

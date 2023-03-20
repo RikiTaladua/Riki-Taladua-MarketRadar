@@ -3,7 +3,6 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: white;
 }
 
 /* Style the content section */
@@ -14,7 +13,7 @@ main {
 
 .content h2 {
     font-size: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .content p {
@@ -32,4 +31,8 @@ main {
     color: #004080;
     font-weight: bold;
     margin-right: 10px;
+}
+
+#value-statement {
+    margin-top: 10px;
 }
